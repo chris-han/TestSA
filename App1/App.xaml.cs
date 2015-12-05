@@ -15,7 +15,7 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 
-namespace App1
+namespace SimpleEventHubPublisher
 {
     /// <summary>
     /// Provides application-specific behavior to supplement the default Application class.
@@ -75,7 +75,9 @@ namespace App1
                 // When the navigation stack isn't restored navigate to the first page,
                 // configuring the new page by passing required information as a navigation
                 // parameter
+#pragma warning disable CS0246 // The type or namespace name 'MainPage' could not be found (are you missing a using directive or an assembly reference?)
                 rootFrame.Navigate(typeof(MainPage), e.Arguments);
+#pragma warning restore CS0246 // The type or namespace name 'MainPage' could not be found (are you missing a using directive or an assembly reference?)
             }
             // Ensure the current window is active
             Window.Current.Activate();
